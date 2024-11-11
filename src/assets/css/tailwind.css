@@ -1,0 +1,28 @@
+
+/* 如果有@import 一定要放在最上面 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Noto Sans TC", sans-serif;
+  }
+  h1{
+    @apply text-2xl text-primary font-bold
+  }
+};
+
+@layer components {
+  /* 這個可以直接寫在component的style裡 */
+  /* 也可以和普通css一起用 */
+  .btn {
+      @apply bg-primary py-1 px-2 rounded text-white hover:bg-sky-300 hover:text-black disabled:bg-gray-300 disabled:text-gray-500
+  }
+};
+
+@layer utilities {
+  .my-padding30 {
+    padding: 30px;
+  }
+}
